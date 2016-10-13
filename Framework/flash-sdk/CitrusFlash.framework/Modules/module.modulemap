@@ -1,0 +1,6 @@
+framework module CitrusFlash {
+  umbrella header "CitrusFlash.h"
+
+  export *
+  module * { export * }
+}

@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CTSUserAddress.h"
+#import "CTSContactUpdate.h"
 @interface CTSUser : NSObject
-@property(strong) NSString *email,*mobile;
+@property (strong )NSString *firstName,*lastName, *email,*mobile;
+@property (strong )CTSUserAddress * address;
+-(CTSContactUpdate *)contact;
+
 @end

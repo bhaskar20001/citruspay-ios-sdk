@@ -149,7 +149,14 @@ typedef void (^ASGetContactInfoCallBack)(CTSProfileContactRes* contactInfo, NSEr
  *
  *  @return The Newly created CTSConsumerProfile, error object.
  */
-typedef void (^ASGetPaymentInfoCallBack)(CTSConsumerProfile *, NSError *);
+@interface CTSProfileLayer : CTSRestPluginBase {
+}
+@property(weak) id<CTSProfileProtocol> delegate;
+- (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
+typedef void (^ASGetContactInfoCallBack)(CTSProfileContactRes* contactInfo,
+                                         NSError* error);
+
+typedef void (^ASGetPaymentInfoCallBack)(CTSConsumerProfile *consumerProfile, NSError *error);
 /**
  *   The CTSProfileLayer class' ASUpdatePaymentInfoCallBack CallBack.
  *
@@ -230,32 +237,6 @@ typedef void (^ASUpdateProfileInfoCallBack)(NSError* error);
 typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *error);
 
 
-/**
- *   CTSProfileLayer.
- */
-@interface CTSProfileLayer : CTSRestPluginBase
-
-/**
- *   The CTSProfileLayer class' delegate object.
- */
-@property (weak) id <CTSProfileProtocol> delegate;
-
-/**
- *   initWithKeyStore.
- *
- *  @param keystoreArg The signinId String, signUpId String, signinSecret String, signUpSecret String and vanity String.
- *
- *  @return The Newly created object.
- */
-- (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
-
-//-(instancetype)init __attribute__((unavailable("init not available Please use [CitrusPaymentSDK fetchSharedProfileLayer]")));
-
-/**
- *   Fetch Shared ProfileLayer.
- *
- *  @return The ProfileLayer object.
- */
 +(CTSProfileLayer*)fetchSharedProfileLayer;
 
 /**
@@ -273,7 +254,16 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
  *  @param paymentOptions The paymentOptions CTSPaymentOptions.
  *  @param callback       The callback ASUpdatePaymentInfoCallBack.
  */
-- (void)updatePaymentInformation:(CTSPaymentOptions *)paymentOptions
+- (void)updatePaymentInfo:(CTSPaymentOptions *)paymentOption
+    withCompletionHandler:(ASUpdatePaymentInfoCallBack)callback;
+
+/**
+ *   update payment related information
+ *
+ *  @param paymentOptions The paymentOptions CTSPaymentDetailUpdate.
+ *  @param callback       The callback ASUpdatePaymentInfoCallBack.
+ */
+- (void)updatePaymentInformation:(CTSPaymentDetailUpdate *)paymentInfo
            withCompletionHandler:(ASUpdatePaymentInfoCallBack)callback;
 
 /**

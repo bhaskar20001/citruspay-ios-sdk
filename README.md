@@ -2,7 +2,11 @@
 
 ![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
 
-## CitrusPay iOS SDK V 4.0.2
+## CitrusPay iOS SDK's
+
+### Core SDK V 4.1.0 - CitrusPay.framework
+
+### CitrusGraphics SDK V 1.0 - CitrusGraphics.framework
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
@@ -201,30 +205,21 @@ CTSProfileLayer * proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
 CTSPaymentLayer * paymentLayer = [CTSPaymentLayer fetchSharedPaymentLayer];
 ~~~
 
-### Enable DEBUG Logs ( By Default it's Disable Logs )
+### Set Logger Level ( By Default it's None )
 
-+ Print Console logs
+Swift
 ~~~{.m}
-[CitrusPaymentSDK enableDEBUGLogs];
+CitrusPaymentSDK.setLogLevel(.verbose)
 ~~~
+
+Objective-C
+~~~{.m}
+[CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
+~~~
+
 
 ### Get the Card's Schemes & Bank Logo Images
-
-+ Get the Card's Schemes Images
-~~~{.m}
-UIImage* image = [CTSUtility fetchSchemeImageBySchemeType:@"scheme" forParentView:self.view];
-~~~
-
-+ Get the Bank Logo Images by Issure Code
-~~~{.m}
-UIImage* image = [CTSUtility fetchBankLogoImageByBankIssuerCode:@"code" forParentView:self.view];
-~~~
-
-+ Get the Bank Logo Images by Bank Name
-~~~{.m}
-UIImage* image = [CTSUtility fetchBankLogoImageByBankName:@"bank" forParentView:self.view];
-~~~
-
++ [CitrusGraphics SDK Version 1.0](https://github.com/citruspay/open-ios/wiki/CitrusGraphics)
 
 Following are the specific tasks related to each of the layer 
 

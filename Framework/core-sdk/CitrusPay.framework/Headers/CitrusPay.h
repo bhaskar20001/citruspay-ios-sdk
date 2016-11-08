@@ -93,6 +93,7 @@ typedef NS_ENUM(NSUInteger, CTSLogLevel) {
  */
 + (void)setLogLevel:(CTSLogLevel)logLevel;
 
+
 /**
  *   Initialize SDK With KeyStore.
  *

@@ -7,39 +7,136 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		761C0F331D912ED200BF9EA2 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761C0F311D912ED200BF9EA2 /* CitrusPay.framework */; };
-		761C0F341D912ED200BF9EA2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 761C0F321D912ED200BF9EA2 /* LICENSE */; };
-		761C0F351D912EDA00BF9EA2 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761C0F2F1D912EC900BF9EA2 /* JSONModel.framework */; };
-		761C0F361D912EDA00BF9EA2 /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 761C0F2F1D912EC900BF9EA2 /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		761C0F391D912EDA00BF9EA2 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761C0F311D912ED200BF9EA2 /* CitrusPay.framework */; };
-		761C0F3A1D912EDA00BF9EA2 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 761C0F311D912ED200BF9EA2 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		766EF8321DD2041A00F99409 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8301DD2041A00F99409 /* CitrusPay.framework */; };
+		766EF8331DD2041A00F99409 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 766EF8311DD2041A00F99409 /* LICENSE */; };
+		766EF83A1DD2042E00F99409 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8391DD2042400F99409 /* JSONModel.framework */; };
+		766EF83B1DD2042E00F99409 /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8391DD2042400F99409 /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		766EF83E1DD2042E00F99409 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8301DD2041A00F99409 /* CitrusPay.framework */; };
+		766EF83F1DD2042E00F99409 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8301DD2041A00F99409 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		766EF8441DD2044900F99409 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8421DD2044900F99409 /* CitrusGraphics.framework */; };
+		766EF8451DD2044900F99409 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 766EF8431DD2044900F99409 /* LICENSE */; };
+		766EF86D1DD2045C00F99409 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8561DD2045100F99409 /* Kingfisher.framework */; };
+		766EF86E1DD2045C00F99409 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8561DD2045100F99409 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		766EF8711DD2045C00F99409 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8421DD2044900F99409 /* CitrusGraphics.framework */; };
+		766EF8721DD2045C00F99409 /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF8421DD2044900F99409 /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		766EF88B1DD207C100F99409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766EF8811DD207C100F99409 /* Assets.xcassets */; };
+		766EF88C1DD207C100F99409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766EF8821DD207C100F99409 /* LaunchScreen.storyboard */; };
+		766EF88D1DD207C100F99409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766EF8841DD207C100F99409 /* Main.storyboard */; };
+		766EF88E1DD207C100F99409 /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766EF8871DD207C100F99409 /* BaseClassViewController.swift */; };
+		766EF88F1DD207C100F99409 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766EF8881DD207C100F99409 /* HomeViewController.swift */; };
+		766EF8901DD207C100F99409 /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766EF8891DD207C100F99409 /* MerchantConstants.swift */; };
+		766EF8911DD207C100F99409 /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766EF88A1DD207C100F99409 /* TestParams.swift */; };
 		76F7785C1CC64F7100C9E7B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F7785B1CC64F7100C9E7B8 /* AppDelegate.swift */; };
 		76F778711CC64F7100C9E7B8 /* CitrusPayExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F778701CC64F7100C9E7B8 /* CitrusPayExampleTests.swift */; };
 		76F7787C1CC64F7100C9E7B8 /* CitrusPayExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F7787B1CC64F7100C9E7B8 /* CitrusPayExampleUITests.swift */; };
 		76F7788B1CC64FD200C9E7B8 /* Objective-CBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F7788A1CC64FD200C9E7B8 /* Objective-CBridgingHeader.m */; };
-		76F778E41CC652B000C9E7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F778D91CC652AF00C9E7B8 /* Assets.xcassets */; };
-		76F778E51CC652B000C9E7B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F778DA1CC652AF00C9E7B8 /* LaunchScreen.storyboard */; };
-		76F778E61CC652B000C9E7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F778DC1CC652AF00C9E7B8 /* Main.storyboard */; };
-		76F778E71CC652B000C9E7B8 /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F778DF1CC652AF00C9E7B8 /* BaseClassViewController.swift */; };
-		76F778E81CC652B000C9E7B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F778E01CC652AF00C9E7B8 /* HomeViewController.swift */; };
-		76F778E91CC652B000C9E7B8 /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F778E21CC652B000C9E7B8 /* MerchantConstants.swift */; };
-		76F778EA1CC652B000C9E7B8 /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F778E31CC652B000C9E7B8 /* TestParams.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		761C0F2E1D912EC900BF9EA2 /* PBXContainerItemProxy */ = {
+		766EF8381DD2042400F99409 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 761C0F2A1D912EC900BF9EA2 /* JSONModel.xcodeproj */;
+			containerPortal = 766EF8341DD2042300F99409 /* JSONModel.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 92C9BC3D1B19A51100D79B06;
 			remoteInfo = JSONModel;
 		};
-		761C0F371D912EDA00BF9EA2 /* PBXContainerItemProxy */ = {
+		766EF83C1DD2042E00F99409 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 761C0F2A1D912EC900BF9EA2 /* JSONModel.xcodeproj */;
+			containerPortal = 766EF8341DD2042300F99409 /* JSONModel.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 92C9BC3C1B19A51100D79B06;
 			remoteInfo = JSONModel;
+		};
+		766EF8551DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D351AD2D09F00CFC3EB;
+			remoteInfo = "Kingfisher-iOS";
+		};
+		766EF8571DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D13F49D61BEDA67C00CE335D;
+			remoteInfo = "Kingfisher-tvOS";
+		};
+		766EF8591DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B2944481C3D01B20088C3E7;
+			remoteInfo = "Kingfisher-macOS";
+		};
+		766EF85B1DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D16799EB1C4E74460020FD12;
+			remoteInfo = "Kingfisher-watchOS";
+		};
+		766EF85D1DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D0B1AD2CFA600CFC3EB;
+			remoteInfo = "Kingfisher-Demo";
+		};
+		766EF85F1DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D13F49C21BEDA53F00CE335D;
+			remoteInfo = "Kingfisher-tvOS-Demo";
+		};
+		766EF8611DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B2944551C3D03880088C3E7;
+			remoteInfo = "Kingfisher-macOS-Demo";
+		};
+		766EF8631DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1679A391C4E78B20020FD12;
+			remoteInfo = "Kingfisher-watchOS-Demo";
+		};
+		766EF8651DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1679A451C4E78B20020FD12;
+			remoteInfo = "Kingfisher-watchOS-Demo Extension";
+		};
+		766EF8671DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D3F1AD2D09F00CFC3EB;
+			remoteInfo = KingfisherTests;
+		};
+		766EF8691DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B37667F1C478F940001443F;
+			remoteInfo = "KingfisherTests-tvOS";
+		};
+		766EF86B1DD2045100F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D10EC2311C3D632300A4211C;
+			remoteInfo = "KingfisherTests-macOS";
+		};
+		766EF86F1DD2045C00F99409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
+			remoteInfo = "Kingfisher-iOS";
 		};
 		76F7786D1CC64F7100C9E7B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -58,14 +155,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		76E948FF1D743FC4001A5E9F /* Embed Frameworks */ = {
+		766EF8401DD2042E00F99409 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				761C0F361D912EDA00BF9EA2 /* JSONModel.framework in Embed Frameworks */,
-				761C0F3A1D912EDA00BF9EA2 /* CitrusPay.framework in Embed Frameworks */,
+				766EF83B1DD2042E00F99409 /* JSONModel.framework in Embed Frameworks */,
+				766EF86E1DD2045C00F99409 /* Kingfisher.framework in Embed Frameworks */,
+				766EF83F1DD2042E00F99409 /* CitrusPay.framework in Embed Frameworks */,
+				766EF8721DD2045C00F99409 /* CitrusGraphics.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,9 +172,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		761C0F2A1D912EC900BF9EA2 /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
-		761C0F311D912ED200BF9EA2 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
-		761C0F321D912ED200BF9EA2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		766EF8301DD2041A00F99409 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
+		766EF8311DD2041A00F99409 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		766EF8341DD2042300F99409 /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
+		766EF8421DD2044900F99409 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
+		766EF8431DD2044900F99409 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
+		766EF8811DD207C100F99409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		766EF8831DD207C100F99409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		766EF8851DD207C100F99409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		766EF8871DD207C100F99409 /* BaseClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClassViewController.swift; sourceTree = "<group>"; };
+		766EF8881DD207C100F99409 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		766EF8891DD207C100F99409 /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantConstants.swift; sourceTree = "<group>"; };
+		766EF88A1DD207C100F99409 /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
 		76F778581CC64F7100C9E7B8 /* CitrusPayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitrusPayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F7785B1CC64F7100C9E7B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F778671CC64F7100C9E7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,13 +196,6 @@
 		76F7787D1CC64F7100C9E7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F778891CC64FD100C9E7B8 /* CitrusPayExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CitrusPayExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		76F7788A1CC64FD200C9E7B8 /* Objective-CBridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Objective-CBridgingHeader.m"; sourceTree = "<group>"; };
-		76F778D91CC652AF00C9E7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76F778DB1CC652AF00C9E7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76F778DD1CC652AF00C9E7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76F778DF1CC652AF00C9E7B8 /* BaseClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClassViewController.swift; sourceTree = "<group>"; };
-		76F778E01CC652AF00C9E7B8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		76F778E21CC652B000C9E7B8 /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantConstants.swift; sourceTree = "<group>"; };
-		76F778E31CC652B000C9E7B8 /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +203,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				761C0F351D912EDA00BF9EA2 /* JSONModel.framework in Frameworks */,
-				761C0F331D912ED200BF9EA2 /* CitrusPay.framework in Frameworks */,
-				761C0F391D912EDA00BF9EA2 /* CitrusPay.framework in Frameworks */,
+				766EF86D1DD2045C00F99409 /* Kingfisher.framework in Frameworks */,
+				766EF8711DD2045C00F99409 /* CitrusGraphics.framework in Frameworks */,
+				766EF83A1DD2042E00F99409 /* JSONModel.framework in Frameworks */,
+				766EF8321DD2041A00F99409 /* CitrusPay.framework in Frameworks */,
+				766EF83E1DD2042E00F99409 /* CitrusPay.framework in Frameworks */,
+				766EF8441DD2044900F99409 /* CitrusGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,45 +229,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		761C0F281D912EA900BF9EA2 /* Dependency */ = {
+		766EF82F1DD2041A00F99409 /* core-sdk */ = {
 			isa = PBXGroup;
 			children = (
-				761C0F2A1D912EC900BF9EA2 /* JSONModel.xcodeproj */,
+				766EF8301DD2041A00F99409 /* CitrusPay.framework */,
+				766EF8311DD2041A00F99409 /* LICENSE */,
 			);
-			path = Dependency;
+			name = "core-sdk";
+			path = "../../../Framework/core-sdk";
 			sourceTree = "<group>";
 		};
-		761C0F291D912EA900BF9EA2 /* Framework */ = {
+		766EF8351DD2042300F99409 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				761C0F301D912ED200BF9EA2 /* core-sdk */,
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
-		761C0F2B1D912EC900BF9EA2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				761C0F2F1D912EC900BF9EA2 /* JSONModel.framework */,
+				766EF8391DD2042400F99409 /* JSONModel.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		761C0F301D912ED200BF9EA2 /* core-sdk */ = {
+		766EF8411DD2044900F99409 /* graphics-sdk */ = {
 			isa = PBXGroup;
 			children = (
-				761C0F311D912ED200BF9EA2 /* CitrusPay.framework */,
-				761C0F321D912ED200BF9EA2 /* LICENSE */,
+				766EF8421DD2044900F99409 /* CitrusGraphics.framework */,
+				766EF8431DD2044900F99409 /* LICENSE */,
 			);
-			name = "core-sdk";
-			path = "../../../../Framework/core-sdk";
+			name = "graphics-sdk";
+			path = "../../../Framework/graphics-sdk";
+			sourceTree = "<group>";
+		};
+		766EF8471DD2045100F99409 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				766EF8561DD2045100F99409 /* Kingfisher.framework */,
+				766EF8581DD2045100F99409 /* Kingfisher.framework */,
+				766EF85A1DD2045100F99409 /* Kingfisher.framework */,
+				766EF85C1DD2045100F99409 /* Kingfisher.framework */,
+				766EF85E1DD2045100F99409 /* Kingfisher-Demo.app */,
+				766EF8601DD2045100F99409 /* Kingfisher-tvOS-Demo.app */,
+				766EF8621DD2045100F99409 /* Kingfisher-macOS-Demo.app */,
+				766EF8641DD2045100F99409 /* Kingfisher-watchOS-Demo.app */,
+				766EF8661DD2045100F99409 /* Kingfisher-watchOS-Demo Extension.appex */,
+				766EF8681DD2045100F99409 /* KingfisherTests.xctest */,
+				766EF86A1DD2045100F99409 /* KingfisherTests-tvOS.xctest */,
+				766EF86C1DD2045100F99409 /* KingfisherTests-macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		766EF8801DD207C100F99409 /* test-ui-example */ = {
+			isa = PBXGroup;
+			children = (
+				766EF8811DD207C100F99409 /* Assets.xcassets */,
+				766EF8821DD207C100F99409 /* LaunchScreen.storyboard */,
+				766EF8841DD207C100F99409 /* Main.storyboard */,
+				766EF8861DD207C100F99409 /* Controllers */,
+				766EF8891DD207C100F99409 /* MerchantConstants.swift */,
+				766EF88A1DD207C100F99409 /* TestParams.swift */,
+			);
+			name = "test-ui-example";
+			path = "../../test-ui-example";
+			sourceTree = "<group>";
+		};
+		766EF8861DD207C100F99409 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				766EF8871DD207C100F99409 /* BaseClassViewController.swift */,
+				766EF8881DD207C100F99409 /* HomeViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		76F7784F1CC64F7100C9E7B8 = {
 			isa = PBXGroup;
 			children = (
-				761C0F281D912EA900BF9EA2 /* Dependency */,
-				761C0F291D912EA900BF9EA2 /* Framework */,
+				766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */,
+				766EF8411DD2044900F99409 /* graphics-sdk */,
+				766EF8341DD2042300F99409 /* JSONModel.xcodeproj */,
+				766EF82F1DD2041A00F99409 /* core-sdk */,
 				76F7785A1CC64F7100C9E7B8 /* CitrusPayExample */,
 				76F7786F1CC64F7100C9E7B8 /* CitrusPayExampleTests */,
 				76F7787A1CC64F7100C9E7B8 /* CitrusPayExampleUITests */,
@@ -183,7 +326,7 @@
 		76F7785A1CC64F7100C9E7B8 /* CitrusPayExample */ = {
 			isa = PBXGroup;
 			children = (
-				76F778D81CC652AF00C9E7B8 /* test-ui */,
+				766EF8801DD207C100F99409 /* test-ui-example */,
 				76F7785B1CC64F7100C9E7B8 /* AppDelegate.swift */,
 				76F778671CC64F7100C9E7B8 /* Info.plist */,
 				76F7788A1CC64FD200C9E7B8 /* Objective-CBridgingHeader.m */,
@@ -210,37 +353,6 @@
 			path = CitrusPayExampleUITests;
 			sourceTree = "<group>";
 		};
-		76F778D81CC652AF00C9E7B8 /* test-ui */ = {
-			isa = PBXGroup;
-			children = (
-				76F778D91CC652AF00C9E7B8 /* Assets.xcassets */,
-				76F778DA1CC652AF00C9E7B8 /* LaunchScreen.storyboard */,
-				76F778DC1CC652AF00C9E7B8 /* Main.storyboard */,
-				76F778DE1CC652AF00C9E7B8 /* Controllers */,
-				76F778E11CC652B000C9E7B8 /* CustomUI */,
-				76F778E21CC652B000C9E7B8 /* MerchantConstants.swift */,
-				76F778E31CC652B000C9E7B8 /* TestParams.swift */,
-			);
-			name = "test-ui";
-			path = "../../../test-ui";
-			sourceTree = "<group>";
-		};
-		76F778DE1CC652AF00C9E7B8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				76F778DF1CC652AF00C9E7B8 /* BaseClassViewController.swift */,
-				76F778E01CC652AF00C9E7B8 /* HomeViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		76F778E11CC652B000C9E7B8 /* CustomUI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomUI;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,12 +363,13 @@
 				76F778541CC64F7100C9E7B8 /* Sources */,
 				76F778551CC64F7100C9E7B8 /* Frameworks */,
 				76F778561CC64F7100C9E7B8 /* Resources */,
-				76E948FF1D743FC4001A5E9F /* Embed Frameworks */,
+				766EF8401DD2042E00F99409 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				761C0F381D912EDA00BF9EA2 /* PBXTargetDependency */,
+				766EF83D1DD2042E00F99409 /* PBXTargetDependency */,
+				766EF8701DD2045C00F99409 /* PBXTargetDependency */,
 			);
 			name = CitrusPayExample;
 			productName = CitrusPayExample;
@@ -306,18 +419,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CitrusPay;
 				TargetAttributes = {
 					76F778571CC64F7100C9E7B8 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					76F7786B1CC64F7100C9E7B8 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						TestTargetID = 76F778571CC64F7100C9E7B8;
 					};
 					76F778761CC64F7100C9E7B8 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						TestTargetID = 76F778571CC64F7100C9E7B8;
 					};
 				};
@@ -335,8 +454,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 761C0F2B1D912EC900BF9EA2 /* Products */;
-					ProjectRef = 761C0F2A1D912EC900BF9EA2 /* JSONModel.xcodeproj */;
+					ProductGroup = 766EF8351DD2042300F99409 /* Products */;
+					ProjectRef = 766EF8341DD2042300F99409 /* JSONModel.xcodeproj */;
+				},
+				{
+					ProductGroup = 766EF8471DD2045100F99409 /* Products */;
+					ProjectRef = 766EF8461DD2045100F99409 /* Kingfisher.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -349,11 +472,95 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		761C0F2F1D912EC900BF9EA2 /* JSONModel.framework */ = {
+		766EF8391DD2042400F99409 /* JSONModel.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = JSONModel.framework;
-			remoteRef = 761C0F2E1D912EC900BF9EA2 /* PBXContainerItemProxy */;
+			remoteRef = 766EF8381DD2042400F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF8561DD2045100F99409 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 766EF8551DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF8581DD2045100F99409 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 766EF8571DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF85A1DD2045100F99409 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 766EF8591DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF85C1DD2045100F99409 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 766EF85B1DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF85E1DD2045100F99409 /* Kingfisher-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-Demo.app";
+			remoteRef = 766EF85D1DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF8601DD2045100F99409 /* Kingfisher-tvOS-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-tvOS-Demo.app";
+			remoteRef = 766EF85F1DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF8621DD2045100F99409 /* Kingfisher-macOS-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-macOS-Demo.app";
+			remoteRef = 766EF8611DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF8641DD2045100F99409 /* Kingfisher-watchOS-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-watchOS-Demo.app";
+			remoteRef = 766EF8631DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF8661DD2045100F99409 /* Kingfisher-watchOS-Demo Extension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "Kingfisher-watchOS-Demo Extension.appex";
+			remoteRef = 766EF8651DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF8681DD2045100F99409 /* KingfisherTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KingfisherTests.xctest;
+			remoteRef = 766EF8671DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF86A1DD2045100F99409 /* KingfisherTests-tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "KingfisherTests-tvOS.xctest";
+			remoteRef = 766EF8691DD2045100F99409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		766EF86C1DD2045100F99409 /* KingfisherTests-macOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "KingfisherTests-macOS.xctest";
+			remoteRef = 766EF86B1DD2045100F99409 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -363,10 +570,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F778E41CC652B000C9E7B8 /* Assets.xcassets in Resources */,
-				76F778E61CC652B000C9E7B8 /* Main.storyboard in Resources */,
-				761C0F341D912ED200BF9EA2 /* LICENSE in Resources */,
-				76F778E51CC652B000C9E7B8 /* LaunchScreen.storyboard in Resources */,
+				766EF8331DD2041A00F99409 /* LICENSE in Resources */,
+				766EF88D1DD207C100F99409 /* Main.storyboard in Resources */,
+				766EF88C1DD207C100F99409 /* LaunchScreen.storyboard in Resources */,
+				766EF88B1DD207C100F99409 /* Assets.xcassets in Resources */,
+				766EF8451DD2044900F99409 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,12 +599,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F778EA1CC652B000C9E7B8 /* TestParams.swift in Sources */,
 				76F7788B1CC64FD200C9E7B8 /* Objective-CBridgingHeader.m in Sources */,
-				76F778E71CC652B000C9E7B8 /* BaseClassViewController.swift in Sources */,
-				76F778E91CC652B000C9E7B8 /* MerchantConstants.swift in Sources */,
 				76F7785C1CC64F7100C9E7B8 /* AppDelegate.swift in Sources */,
-				76F778E81CC652B000C9E7B8 /* HomeViewController.swift in Sources */,
+				766EF88E1DD207C100F99409 /* BaseClassViewController.swift in Sources */,
+				766EF8911DD207C100F99409 /* TestParams.swift in Sources */,
+				766EF8901DD207C100F99409 /* MerchantConstants.swift in Sources */,
+				766EF88F1DD207C100F99409 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,10 +627,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		761C0F381D912EDA00BF9EA2 /* PBXTargetDependency */ = {
+		766EF83D1DD2042E00F99409 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JSONModel;
-			targetProxy = 761C0F371D912EDA00BF9EA2 /* PBXContainerItemProxy */;
+			targetProxy = 766EF83C1DD2042E00F99409 /* PBXContainerItemProxy */;
+		};
+		766EF8701DD2045C00F99409 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Kingfisher-iOS";
+			targetProxy = 766EF86F1DD2045C00F99409 /* PBXContainerItemProxy */;
 		};
 		76F7786E1CC64F7100C9E7B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -437,18 +650,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		76F778DA1CC652AF00C9E7B8 /* LaunchScreen.storyboard */ = {
+		766EF8821DD207C100F99409 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76F778DB1CC652AF00C9E7B8 /* Base */,
+				766EF8831DD207C100F99409 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		76F778DC1CC652AF00C9E7B8 /* Main.storyboard */ = {
+		766EF8841DD207C100F99409 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76F778DD1CC652AF00C9E7B8 /* Base */,
+				766EF8851DD207C100F99409 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -469,8 +682,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -513,8 +728,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -533,6 +750,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -540,8 +758,10 @@
 		76F778811CC64F7100C9E7B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
 				INFOPLIST_FILE = CitrusPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -550,14 +770,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CitrusPayExample/CitrusPayExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		76F778821CC64F7100C9E7B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
 				INFOPLIST_FILE = CitrusPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -565,6 +788,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk.using-Swift-binary-library";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CitrusPayExample/CitrusPayExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -572,10 +796,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CitrusPayExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitrusPayExample.app/CitrusPayExample";
 			};
 			name = Debug;
@@ -584,10 +810,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CitrusPayExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitrusPayExample.app/CitrusPayExample";
 			};
 			name = Release;
@@ -595,10 +823,12 @@
 		76F778871CC64F7100C9E7B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CitrusPayExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = CitrusPayExample;
 				USES_XCTRUNNER = YES;
 			};
@@ -607,10 +837,12 @@
 		76F778881CC64F7100C9E7B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CitrusPayExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = CitrusPayExample;
 				USES_XCTRUNNER = YES;
 			};

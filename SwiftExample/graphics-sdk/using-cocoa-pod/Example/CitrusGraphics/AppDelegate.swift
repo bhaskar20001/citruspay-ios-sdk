@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  CitrusPayExample
+//  CitrusGraphics
 //
-//  Created by Mukesh Patil on 4/12/16.
-//  Copyright © 2016 CitrusPay. All rights reserved.
+//  Created by mukeshpatil1 on 11/08/2016.
+//  Copyright (c) 2016 mukeshpatil1. All rights reserved.
 //
 
 import UIKit

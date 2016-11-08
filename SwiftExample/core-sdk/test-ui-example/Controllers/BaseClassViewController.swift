@@ -37,21 +37,22 @@ class BaseClassViewController: UIViewController {
         keyStore.vanity = VanityUrl
         
         #if PRODUCTION_MODE
-            CitrusPaymentSDK.initializeWithKeyStore(keyStore, environment: CTSEnvProduction)
-            #else
-            CitrusPaymentSDK.initializeWithKeyStore(keyStore, environment: CTSEnvSandbox)
+            CitrusPaymentSDK.initWithSign(inID: SignInId, signInSecret: SignInSecretKey, signUpID: SubscriptionId, signUpSecret: SubscriptionSecretKey, vanityUrl: VanityUrl, environment: CTSEnvProduction)
+            
+            CitrusPaymentSDK.setLogLevel(.verbose)
+        #else
+            CitrusPaymentSDK.initWithSign(inID: SignInId, signInSecret: SignInSecretKey, signUpID: SubscriptionId, signUpSecret: SubscriptionSecretKey, vanityUrl: VanityUrl, environment: CTSEnvSandbox)
+            
+            CitrusPaymentSDK.setLogLevel(.verbose)
         #endif
-        
-        
-        CitrusPaymentSDK.enableDEBUGLogs()
         
         CitrusPaymentSDK.enableLoader()
         
-        CitrusPaymentSDK.setLoaderColor(UIColor .orangeColor())
+        CitrusPaymentSDK.setLoaderColor(UIColor .orange)
         
-        self.authLayer = CTSAuthLayer.fetchSharedAuthLayer()
-        self.profileLayer = CTSProfileLayer.fetchSharedProfileLayer()
-        self.paymentLayer = CTSPaymentLayer.fetchSharedPaymentLayer()
+        self.authLayer = CTSAuthLayer.fetchShared()
+        self.profileLayer = CTSProfileLayer.fetchShared()
+        self.paymentLayer = CTSPaymentLayer.fetchShared()
         
         
         contactInfo?.firstName = TEST_FIRST_NAME;
@@ -66,10 +67,10 @@ class BaseClassViewController: UIViewController {
         addressInfo?.street2 = TEST_STREET2;
         addressInfo?.zip = TEST_ZIP;
         
-        customParams = ["USERDATA2":"MOB_RC|9988776655",
-            "USERDATA10":"test",
-            "USERDATA4":"MOB_RC|test@gmail.com",
-            "USERDATA3":"MOB_RC|4111XXXXXXXX1111"]
+        customParams = ["USERDATA2":"MOB_RC|9988776655" as AnyObject,
+            "USERDATA10":"test" as AnyObject,
+            "USERDATA4":"MOB_RC|test@gmail.com" as AnyObject,
+            "USERDATA3":"MOB_RC|4111XXXXXXXX1111" as AnyObject]
         
     }
     

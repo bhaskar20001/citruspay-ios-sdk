@@ -20,15 +20,15 @@ class HomeViewController: BaseClassViewController {
             scope:CTSWalletScopeFull,
             completionHandler: { (linkResponse, error) -> Void in
                 if(error != nil){
-                    UIUtility.toastMessageOnScreen(error.localizedDescription)
-                    print("Response JSON: \(error.localizedDescription)")
+                    UIUtility.toastMessage(onScreen:error?.localizedDescription)
+                    print("Response JSON: \(error?.localizedDescription)")
                 }else{
-                    UIUtility.toastMessageOnScreen(linkResponse.userMessage)
+                    UIUtility.toastMessage(onScreen: linkResponse?.userMessage)
                     print("success")
                     
-                    dispatch_async(dispatch_get_main_queue(),{
+                    DispatchQueue.main.async {
                         self.showAndVerifyOtp()
-                    })
+                    }
                 }
                 
         })
@@ -39,32 +39,32 @@ class HomeViewController: BaseClassViewController {
     
     func showAndVerifyOtp() -> Void {
         
-            let alert = UIAlertController (title: "", message: "Please enter the OTP sent to your phone", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
-            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            let alert = UIAlertController (title: "", message: "Please enter the OTP sent to your phone", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (action) -> Void in
                 // Now do whatever you want with inputTextField (remember to unwrap the optional)
-                self.authLayer?.requestMasterLinkSignInWithPassword(alert.textFields![0].text,
+                self.authLayer?.requestMasterLinkSignIn(withPassword: alert.textFields![0].text,
                     passwordType: PasswordTypeOtp,
                     completionHandler: { (error) -> Void in
                         if (error != nil) {
                             // Handle Error
-                            UIUtility.toastMessageOnScreen("Verification Failed")
+                            UIUtility.toastMessage(onScreen: "Verification Failed")
                             print("Verification Failed")
                         }
                         else{
                             // Handle Success
-                            UIUtility.toastMessageOnScreen("Success")
+                            UIUtility.toastMessage(onScreen: "Success")
                             print("success")
                             CTSOauthManager.readPasswordSigninOuthData();
                         }
                 })
             }))
-            alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            alert.addTextField(configurationHandler: {(textField: UITextField!) in
                 textField.placeholder = "OTP"
-                textField.keyboardType=UIKeyboardType.NumberPad
+                textField.keyboardType=UIKeyboardType.numberPad
             })
             
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
 
     }
     
@@ -81,27 +81,28 @@ class HomeViewController: BaseClassViewController {
     
     
     // this is just sample code 
-    class  func requestBillAmount (amount :NSString, customParams :NSArray, billURL :NSString, completion : (bill :CTSBill? ,error :NSError?)->Void){
-        let session = NSURLSession.sharedSession();
+    class  func requestBillAmount (amount :NSString, customParams :NSArray, billURL :NSString, completion : @escaping (_ bill :CTSBill? ,_ error :NSError?)->Void){
+        let session = URLSession.shared;
         
         let url = NSURL(string: "\(billURL)?amount\(amount)&\(customParams)")
         
-        let loadTask = session.dataTaskWithURL(url!) { (data :NSData?, response :NSURLResponse?, error :NSError?) -> Void in
+        let loadTask = session.dataTask(with: url as! URL) { data, response, error in
+       // let loadTask = session.dataTaskWithURL(url! as URL) { (data :NSData?, response :URLResponse?, error :NSError?) -> Void in
             if let errorResponse = error {
-                completion(bill: nil, error: errorResponse)
-            }else if let httpResponse = response as? NSHTTPURLResponse{
+                completion(nil, errorResponse as NSError?)
+            }else if let httpResponse = response as? HTTPURLResponse{
                 if httpResponse.statusCode != 200 {
                     let errorResponse = NSError(domain: "Domain", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey :"Http status code has unexpected value"])
-                    completion(bill: nil, error: errorResponse)
+                    completion(nil, errorResponse)
                 }else{
-                    let dataString = String(data: data!, encoding: NSUTF8StringEncoding)
+                    let dataString = String(data: data!, encoding: String.Encoding.utf8)
                     var jsonError : JSONModelError?
                     let sampleBill: CTSBill = CTSBill(string:dataString, error:&jsonError)
                     if (jsonError != nil) {
-                        completion(bill: sampleBill, error: nil)
+                        completion(sampleBill, nil)
                     }
                     else {
-                        completion(bill: sampleBill, error: nil)
+                        completion(sampleBill, nil)
                     }
                 }
             }

@@ -160,33 +160,27 @@ Objective-C
 #import <CitrusPay/CitrusPay.h>
 ~~~
 
-####How to configure KeyStore Object
-As you must have noticed the SDK initialization requires you to pass the Keystore object please see below how to configure it.     
-
-~~~{.m}
-CTSKeyStore *keyStore = [[CTSKeyStore alloc] init];
-keyStore.signinId = @"test-signin";
-keyStore.signinSecret = @"52f7e15efd4208cf5345dd554443fd99";
-keyStore.signUpId = @"test-signup";
-keyStore.signUpSecret = @"c78ec84e389814a05d3ae46546d16d2e";
-keyStore.vanity = @"testing";
-~~~
-
 ####Setup working Enviroments
 
 SDK operates in two different modes Sandbox and Production mode. for both the enviroments Citrus PG Prerequisites key sets are different. keys from one enviroment won't work on other. so please make sure you are using correct set of keys.
 During the developement you would always want to use the Sandbox mode. once you are done with your App development you can switch to production mode . 
 
-you need to use `[CitrusPaymentSDK initializeWithKeyStore: environment:]` to initialize the SDK
-
-Sandbox:
+Swift
 ~~~{.m}
-[CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvSandbox];
+#if PRODUCTION_MODE
+CitrusPaymentSDK.initWithSign(inID: SignInId, signInSecret: SignInSecretKey, signUpID: SubscriptionId, signUpSecret: SubscriptionSecretKey, vanityUrl: VanityUrl, environment: CTSEnvProduction)
+#else
+CitrusPaymentSDK.initWithSign(inID: SignInId, signInSecret: SignInSecretKey, signUpID: SubscriptionId, signUpSecret: SubscriptionSecretKey, vanityUrl: VanityUrl, environment: CTSEnvSandbox)
+#endif
 ~~~
 
-Production:
+Objective-C
 ~~~{.m}
-[CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
+#if PRODUCTION_MODE
+[CitrusPaymentSDK initWithSignInID: SignInId signInSecret: SignInSecretKey signUpID: SubscriptionId signUpSecret: SubscriptionSecretKey vanityUrl: VanityUrl environment: CTSEnvProduction];
+#else
+[CitrusPaymentSDK initWithSignInID: SignInId signInSecret: SignInSecretKey signUpID: SubscriptionId signUpSecret: SubscriptionSecretKey vanityUrl: VanityUrl environment: CTSEnvSandbox];
+#endif
 ~~~
 
 Only after you are done with initialization you can proceed with following guide 
@@ -198,6 +192,19 @@ The SDK is logically divided into 3 modules/layers or interfacing classes
 
 To use any of the above layers your need to fetch their singlton instance from CitrusPaymentSDK's class methods,
 
+Swift
+~~~{.m}
+// initialization in your .m file
+var authLayer : CTSAuthLayer?
+var profileLayer : CTSProfileLayer?
+var paymentLayer : CTSPaymentLayer?
+
+authLayer = CTSAuthLayer.fetchShared()
+profileLayer = CTSProfileLayer.fetchShared()
+paymentLayer = CTSPaymentLayer.fetchShared()
+~~~
+
+Objective-C
 ~~~{.m}
 // initialization in your .m file
 CTSAuthLayer * authLayer = [CTSAuthLayer fetchSharedAuthLayer];

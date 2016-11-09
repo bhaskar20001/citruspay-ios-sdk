@@ -50,7 +50,6 @@
 /* Begin PBXFileReference section */
 		302F356DCFD618A9E4DB4713 /* Pods-CitrusGraphics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Tests/Pods-CitrusGraphics_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		342A1A2FABFC21EF07016C6F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		4AA7457CCAEC31C79E959EE4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4EA32616BAAE5ECCF17EB11F /* Pods-CitrusGraphics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Tests/Pods-CitrusGraphics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CitrusGraphics_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitrusGraphics_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				766EF8181DD1F52E00F99409 /* CitrusGraphics.podspec */,
-				4AA7457CCAEC31C79E959EE4 /* README.md */,
 				342A1A2FABFC21EF07016C6F /* LICENSE */,
 			);
 			name = "Podspec Metadata";

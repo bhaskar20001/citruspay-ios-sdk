@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Citrus Graphics Demo v1.0-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                             <constraint firstItem="71Q-y0-RnN" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="wWc-xb-pJl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Citrus Graphics Demo v1.0" id="Q3z-Lu-9pL"/>
+                    <navigationItem key="navigationItem" id="Q3z-Lu-9pL"/>
                     <connections>
                         <outlet property="tableView" destination="71Q-y0-RnN" id="Lst-WQ-T26"/>
                     </connections>

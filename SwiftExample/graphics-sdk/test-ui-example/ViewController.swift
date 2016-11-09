@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        title = "Citrus Graphics Demo v1.0"
+        title = "Citrus Graphics Demo v\(CITRUSGRAPHICS_VERSION)"
         self.initializeSDK()
         
         

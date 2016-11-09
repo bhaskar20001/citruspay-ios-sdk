@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/citruspay/citruspay-ios-sdk'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mukesh Patil' => 'mukesh.patil@citruspay.com' }
-  s.source           = { :git => "https://github.com/citruspay/citruspay-ios-sdk.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/citruspay/citruspay-ios-sdk.git", :tag => "graphics.0.0.1" }
 
   s.platform         = :ios, '8.0'
   s.requires_arc     = true

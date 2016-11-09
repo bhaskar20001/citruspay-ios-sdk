@@ -10,7 +10,6 @@
 		766EF69B1DD1C1E400F99409 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 766EF69A1DD1C1E400F99409 /* main.m */; };
 		766EF69E1DD1C1E400F99409 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 766EF69D1DD1C1E400F99409 /* AppDelegate.m */; };
 		766EF6B41DD1C1E400F99409 /* CitrusGraphicsExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 766EF6B31DD1C1E400F99409 /* CitrusGraphicsExampleTests.m */; };
-		766EF78B1DD1CC9800F99409 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF7891DD1CC9800F99409 /* CitrusGraphics.framework */; };
 		766EF78C1DD1CC9800F99409 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 766EF78A1DD1CC9800F99409 /* LICENSE */; };
 		766EF7DB1DD1CCC100F99409 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF7C41DD1CCB800F99409 /* Kingfisher.framework */; };
 		766EF7DC1DD1CCC100F99409 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF7C41DD1CCB800F99409 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -164,7 +163,6 @@
 			files = (
 				766EF7DB1DD1CCC100F99409 /* Kingfisher.framework in Frameworks */,
 				766EF7DF1DD1CCC100F99409 /* CitrusGraphics.framework in Frameworks */,
-				766EF78B1DD1CC9800F99409 /* CitrusGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

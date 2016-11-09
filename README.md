@@ -53,7 +53,7 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 
 See the the latest [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases)
 
-#### Using [cocoapods](https://cocoapods.org/) (recommended)
+#### Using [CocoaPods](https://cocoapods.org/) (recommended)
 CocoaPods is a dependency manager for Cocoa projects. You can install it with the following command:
 
 ~~~{.m}
@@ -94,13 +94,13 @@ $ git submodule update --init --recursive
 $ open citruspay-ios-sdk
 ~~~
 + Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
-+ Select the target & Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
++ Select the target and Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Then navigate to `General` tab and expand the `Embedded Binaries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 
 #### Or Using Manually
-+ Clone it 
++ Clone it using following command
 ~~~{.m}
 $ git clone --recursive https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
@@ -113,24 +113,24 @@ $ open citruspay-ios-sdk
 + Include the following framework:
 - `CitrusPay.framework`
 
-##### Add dependency (required for Using Submodule & Manually)
-1. JSONModel 
+#### Add dependency (required for Using Submodule & Manually)
+##### JSONModel 
 + Navigate to "Dependency" folder & drag the `JSONModel.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
-+ Select the target & Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
++ Select the target and Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
 + Click the + and `JSONModel.framework` appropriate to your target's platform
 + Then navigate to `General` tab and expand the `Embedded Binaries` section
 + Click the + and `JSONModel.framework` appropriate to your target's platform
 
-2. CitrusGraphics 
+##### CitrusGraphics 
 + Navigate to "Framework" folder & drag "graphics-sdk" folder into your existing Xcode project
-+ Select the target & Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
++ Select the target and Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusGraphics.framework` appropriate to your target's platform
 + Then navigate to `General` tab and expand the `Embedded Binaries` section
 + Click the + and `CitrusGraphics.framework` appropriate to your target's platform
 
-3. Kingfisher 
+##### Kingfisher 
 + Navigate to "Dependency" folder & drag the `Kingfisher.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
-+ Select the target & Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
++ Select the target and Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
 + Click the + and `Kingfisher.framework` appropriate to your target's platform
 + Then navigate to `General` tab and expand the `Embedded Binaries` section
 + Click the + and `Kingfisher.framework` appropriate to your target's platform

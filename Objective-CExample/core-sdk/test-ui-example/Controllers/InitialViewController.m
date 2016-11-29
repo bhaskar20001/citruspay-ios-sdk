@@ -28,9 +28,12 @@
     
     [super viewDidLoad];
     
+    self.versionLabel.text = [NSString stringWithFormat:@"CitrusPay Core SDK Demo v%@", SDK_VERSION];
+
     _baseViewController = [[BaseViewController alloc] init];
     
     [self SetUpSegmentedControl];
+    
      self.signupOptionOneButton.layer.cornerRadius = 4;
      self.signupOptionTwoButton.layer.cornerRadius = 4;
      self.signupOptionThreeButton.layer.cornerRadius = 4;

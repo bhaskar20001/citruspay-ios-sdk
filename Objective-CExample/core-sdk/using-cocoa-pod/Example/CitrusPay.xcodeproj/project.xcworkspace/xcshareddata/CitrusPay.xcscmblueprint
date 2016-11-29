@@ -10,7 +10,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D8EC202F-6395-4032-9FCA-34D20287FB88",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "69477F3283BCA765B2921E78BA499AB7EB018F60" : "..",
-    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "CitrusPay-iOS\/"
+    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "public-release-27\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CitrusPay",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,

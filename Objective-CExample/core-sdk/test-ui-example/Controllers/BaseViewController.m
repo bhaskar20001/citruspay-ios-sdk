@@ -50,7 +50,12 @@
         if (newIndex == 0) {
             NSLog(@"setupWorkingEnvironmentTo CTSEnvSandbox");
             // initialize the SDK by setting it up with ClientIds
-            [CitrusPaymentSDK initWithSignInID:SignInId_Sandbox signInSecret:SignInSecretKey_Sandbox signUpID:SubscriptionId_Sandbox signUpSecret:SubscriptionSecretKey_Sandbox vanityUrl:VanityUrl_Sandbox environment:CTSEnvSandbox];
+            [CitrusPaymentSDK initWithSignInID:SignInId_Sandbox
+                                  signInSecret:SignInSecretKey_Sandbox
+                                      signUpID:SubscriptionId_Sandbox
+                                  signUpSecret:SubscriptionSecretKey_Sandbox
+                                     vanityUrl:VanityUrl_Sandbox
+                                   environment:CTSEnvSandbox];
             self.billUrl = BillUrl_Sandbox;
             self.returnUrl = ReturnUrl_Sandbox;
             

@@ -69,10 +69,6 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
     //logger
 + (void)logProperties:(id)object ;
 
-
-
-
-
     //string utils
 +(NSString *)removeWhiteSpacesFromString:(NSString *)string;
 +(BOOL)stringContainsSpecialChars:(NSString *)toCheck exceptChars:(NSString*)exceptionChars exceptCharSet:(NSCharacterSet*)exceptionCharSet;
@@ -87,9 +83,6 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(BOOL)isNonNumeric:(NSString *)string;
 +(NSString *)toJson:(NSDictionary *)dict;
 +(NSDictionary *)toDict:(NSString *)json;
-
-
-
 
     //app specific
 +(BOOL)isSchemeAllowed:(NSString *)userScheme forOptions:(NSArray *)merchantOptions;
@@ -149,8 +142,6 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(CTSKeyStore *)keyStore;
 +(CTSKeyStore *)fetchCachedKeyStore;
 
-
-
     //validators
 +(BOOL)validateDecimalAmountString:(NSString *)amount;
 +(BOOL)validateEmail:(NSString*)email;
@@ -175,15 +166,17 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(UIColor *)colorFromHexString:(NSString *)hexString;
 +(NSString *)correctCommonAmountFormat:(NSString *)amount;
 
-
++(UIColor *)topBarColor;
++(UIColor *)topTitleTextColor;
++(UIColor *)buttonColor;
++(UIColor *)buttonTextColor;
++(UIColor *)indicatorTintColor;
 
     //style fonts PnP
 +(NSDictionary*)fontStyleForNumber:(int)number;
 +(UILabel *)lableWithStyleNumber:(int)number;
 +(UIColor *)colorForStyle:(int)styleNumber;
 +(UIFont *)fontForStyle:(int)styleNumber;
-
-
 
     //formatting
 +(NSString *)cardNumberSpaced:(NSString *)cardNumber;
@@ -224,7 +217,4 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(BOOL)isUserCookieValid;
 +(NSString*)getHTMLWithString:(NSString *)string;
 +(BOOL)isURL:(NSURL *)aURL toUrl:(NSURL *)bUrl;
-
-
-
 @end

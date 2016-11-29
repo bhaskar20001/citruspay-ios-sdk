@@ -18,7 +18,6 @@
 		766EF6CF1DD1C2D700F99409 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF6C01DD1C2B700F99409 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		766EF6D31DD1C2F600F99409 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF6D11DD1C2F600F99409 /* CitrusGraphics.framework */; };
 		766EF6D41DD1C2F600F99409 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 766EF6D21DD1C2F600F99409 /* LICENSE */; };
-		766EF7001DD1C32400F99409 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF6D11DD1C2F600F99409 /* CitrusGraphics.framework */; };
 		766EF7011DD1C32400F99409 /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF6D11DD1C2F600F99409 /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		766EF72F1DD1C38F00F99409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766EF7031DD1C38F00F99409 /* Assets.xcassets */; };
 		766EF7301DD1C38F00F99409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766EF7041DD1C38F00F99409 /* LaunchScreen.storyboard */; };
@@ -251,7 +250,6 @@
 				766EF6CA1DD1C2D700F99409 /* JSONModel.framework in Frameworks */,
 				766EF6D31DD1C2F600F99409 /* CitrusGraphics.framework in Frameworks */,
 				766EF6C21DD1C2B700F99409 /* CitrusPay.framework in Frameworks */,
-				766EF7001DD1C32400F99409 /* CitrusGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +520,8 @@
 				TargetAttributes = {
 					76531C5D1CB68E7A0065EADA = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BF75J23QJ2;
+						ProvisioningStyle = Automatic;
 					};
 					76531C761CB68E7A0065EADA = {
 						CreatedOnToolsVersion = 7.0;
@@ -863,8 +863,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BF75J23QJ2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
 				INFOPLIST_FILE = CitrusPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -872,6 +874,8 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk-using-binary-library";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -881,8 +885,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BF75J23QJ2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
 				INFOPLIST_FILE = CitrusPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -890,6 +896,8 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk-using-binary-library";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

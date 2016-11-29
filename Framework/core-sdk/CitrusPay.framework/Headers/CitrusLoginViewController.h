@@ -11,6 +11,6 @@
 #define KUserClickedDone @"CitrusUserClickedDone"
 @interface CitrusLoginViewController : UIViewController<UITextFieldDelegate>
 @property CTSMasterLinkRes *linkResponse;
-
-
+- (void)reloadCitrusLoginView;
+- (void)resetCitrusLoginView;
 @end

@@ -149,12 +149,31 @@ typedef void (^ASGetContactInfoCallBack)(CTSProfileContactRes* contactInfo, NSEr
  *
  *  @return The Newly created CTSConsumerProfile, error object.
  */
-@interface CTSProfileLayer : CTSRestPluginBase {
-}
+@interface CTSProfileLayer : CTSRestPluginBase
+/**
+ *   The CTSProfileLayer class' CTSProfileProtocol delegate.
+ *
+ *  @return The Newly created delegate object.
+ */
 @property(weak) id<CTSProfileProtocol> delegate;
+/**
+ *   The CTSProfileLayer class' initWithKeyStore method.
+ *
+ *  @return The Newly created keystoreArg object.
+ */
 - (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
+/**
+ *   The CTSProfileLayer class' ASGetContactInfoCallBack CallBack.
+ *
+ *  @return The Newly created contactInfo & error object.
+ */
 typedef void (^ASGetContactInfoCallBack)(CTSProfileContactRes* contactInfo,
                                          NSError* error);
+/**
+ *   The CTSProfileLayer class' ASGetPaymentInfoCallBack CallBack.
+ *
+ *  @return The Newly created consumerProfile & error object.
+ */
 
 typedef void (^ASGetPaymentInfoCallBack)(CTSConsumerProfile *consumerProfile, NSError *error);
 /**

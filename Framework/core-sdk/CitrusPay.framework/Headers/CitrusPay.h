@@ -224,6 +224,39 @@ typedef NS_ENUM(NSUInteger, CTSLogLevel) {
  */
 +(UIColor *)getLoaderColor;
 
+/**
+ *   Set TopBarColor.
+ *
+ *  @param color The TopBarColor.
+ */
++(void)setTopBarColor:(UIColor *)color;
+
+/**
+ *   Set TopTitleTextColor.
+ *
+ *  @param color The TopTitleTextColor.
+ */
++(void)setTopTitleTextColor:(UIColor *)color;
+
+/**
+ *   Set ButtonColor.
+ *
+ *  @param color The ButtonColor.
+ */
++(void)setButtonColor:(UIColor *)color;
+
+/**
+ *   Set ButtonTextColor.
+ *
+ *  @param color The ButtonTextColor.
+ */
++(void)setButtonTextColor:(UIColor *)color;
+/**
+ *   Set IndicatorTintColor.
+ *
+ *  @param color The IndicatorTintColor.
+ */
++(void) setIndicatorTintColor:(UIColor *)color;
 
 /**
  *   Check is Blaze Card Payment Enabled.

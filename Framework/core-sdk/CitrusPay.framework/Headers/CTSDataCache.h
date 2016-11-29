@@ -47,6 +47,7 @@ extern NSString *const PNP_TOP_BAR_COLOR;
 extern NSString *const PNP_TOP_TEXT_COLOR;
 extern NSString *const PNP_BUTTON_COLOR;
 extern NSString *const PNP_BUTTON_TEXT_COLOR;
+extern NSString *const PNP_INDICATOR_TINT_COLOR;
 
 extern NSString *const PNP_MERCHANT_DISPLAY_NAME;
 extern NSString *const PNP_PAYMENT_RESPONSE;

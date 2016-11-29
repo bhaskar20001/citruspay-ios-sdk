@@ -19,10 +19,6 @@
 #import "CTSLinkedUserState.h"
 @class CTSLinkUserRes, CTSLinkRes, CTSTokenValidityRes, CTSUserDetails, CTSResponse;
 
-
-
-
-
 @class CTSAuthLayer;
 @protocol CTSAuthenticationProtocol
 
@@ -214,6 +210,7 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 
 +(CTSAuthLayer*)fetchSharedAuthLayer;
 
+- (BOOL)isMerchantLoggedIn;
 
 /**
  *  sign in the user

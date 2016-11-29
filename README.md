@@ -4,10 +4,6 @@
 
 ## CitrusPay iOS SDK's
 
-### Core SDK V 4.1.0 - CitrusPay.framework
-
-### CitrusGraphics SDK V 1.0 - CitrusGraphics.framework
-
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
 
@@ -15,12 +11,21 @@ It is meant for consumption by [CitrusPay](http://www.citruspay.com) partners wh
 
 ##Features
 CitrusPay iOS SDK broadly offers following features.
+
+### Core SDK V 4.1.0 - CitrusPay.framework
+
++ Creating Citrus account for the user.
 + Prepaid Payments.
-+ Direct credit/debit card (CC, DC) or netbanking payments (NB) .
++ Direct credit/debit card (CC, DC) or netbanking payments (NB).
 + Saving Credit/Debit cards into user's account for easier future payments by abiding The Payment Card Industry Data Security Standard (PCI DSS).
-+ Loading Money into users Citrus prepaid account for Prepaid facility .
-+ Withdraw the money back into User's bank account from the Prepaid account .
-+ Creating Citrus account for the user .
++ Loading Money into users Citrus prepaid account for Prepaid facility.
++ Withdraw the money back into User's bank account from the Prepaid account.
+
+### CitrusGraphics SDK V 1.0 - CitrusGraphics.framework
+
++ A lightweight, pure-Swift library for downloading and caching images from the Citrus cloud.
++ Dynamic Assets could be consumed by any module for their assets requirements. 
++ SDK have both default & low resolution image for it which will be replaced by high resolution image once asset is downloaded and cached based on device specification.
 
 ####[ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/ChangeLog)
 
@@ -31,7 +36,7 @@ CitrusPay iOS SDK broadly offers following features.
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-+ Xcode 6 or higher.
++ Xcode 8 or higher.
 
 ###Citrus PG Prerequisites
 + You need to enroll with Citrus as a merchant.

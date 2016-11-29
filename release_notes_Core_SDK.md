@@ -7,8 +7,10 @@ CitrusPay iOS SDK Kit Release Notes:
 #### Current Version
 + SDK Initializer method change.
 + Added SDK logger level.
-+ Supporting "CitrusGraphics.framework" - A lightweight, pure-Swift library for downloading and caching images from the web.
++ CitrusGraphics framework support - A lightweight, pure-Swift library for downloading and caching images from the Citrus cloud.
 + New BIN Service API implementation.
++ LoadMoney enhancement.
++ User management enhancement.
 
 #### 4.0.2
 + Fixed variable name conflict with Apple's private APIs to avoid app store rejection.

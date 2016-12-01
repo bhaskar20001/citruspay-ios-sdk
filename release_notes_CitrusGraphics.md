@@ -5,5 +5,5 @@ CitrusGraphics iOS SDK Kit Release Notes:
 -----
 
 #### Current Version
-+ A lightweight, pure-Swift library for downloading and caching images from the Citrus cloud.
-+ Dynamic Assets could be consumed by any module for their assets requirements. 
++ A lightweight, pure-Swift library for downloading and caching images from the Citrus cloud
++ Dynamic Assets available to module for their assets requirements

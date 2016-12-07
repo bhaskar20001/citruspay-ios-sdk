@@ -4,41 +4,45 @@
 
 ## CitrusPay iOS SDK's
 
+
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
 
-It is meant for consumption by [CitrusPay](http://www.citruspay.com) partners who are developing their own iOS apps aimed at merchants and/or consumers.
+The SDK is designed for [CitrusPay](http://www.citruspay.com) partners who are developing their own iOS apps. The SDK provides a native integration to accept payments within these apps that is easy to integration and provides a high performance, functional checkout experience.
 
 ##Features
 CitrusPay iOS SDK broadly offers following features.
 
 ### Core SDK V 4.1.0 - CitrusPay.framework
 
-+ Creating Citrus account for the user.
-+ Prepaid Payments.
-+ Direct credit/debit card (CC, DC) or netbanking payments (NB).
-+ Saving Credit/Debit cards into user's account for easier future payments by abiding The Payment Card Industry Data Security Standard (PCI DSS).
-+ Loading Money into users Citrus prepaid account for Prepaid facility.
-+ Withdraw the money back into User's bank account from the Prepaid account.
++ Creating Citrus account for the user
++ Prepaid Payments
++ Payments via  credit/debit card (CC, DC) or netbanking payments (NB)
++ Saving Credit/Debit cards into user's account for easier future payments by abiding The Payment Card Industry Data Security Standard (PCI DSS)
++ Loading Money into users Citrus prepaid account for Prepaid facility
++ Withdraw the money back into User's bank account from the Prepaid account
++ On-Demand asset loading (Via CitrusGraphics library)
 
 ### CitrusGraphics SDK V 1.0 - CitrusGraphics.framework
 
-+ A lightweight, pure-Swift library for downloading and caching images from the Citrus cloud.
-+ Dynamic Assets could be consumed by any module for their assets requirements. 
-+ SDK have both default & low resolution image for it which will be replaced by high resolution image once asset is downloaded and cached based on device specification.
++ A lightweight, pure-Swift library for downloading and caching images from the Citrus cloud
++ Dynamic Assets available to module for their assets requirements
++ SDK have both default & low resolution image for it which will be replaced by high resolution image once asset is downloaded and cached based on device specification
 
-####[ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/ChangeLog)
+####The full SDK [ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/ChangeLog) is also available
 
-####[Migration from 3.0.x to 3.1.x or higher](https://github.com/citruspay/citruspay-ios-sdk/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
+####Migration from 3.0.x to 3.1.x or higher
+To migrate your integration from Citrus 3.0.x to 3.1.x or higher, please go through the [migration instructions](https://github.com/citruspay/citruspay-ios-sdk/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
 
-## Usage
+## Example Project
 
+An example project is available via CocoaPods to try out and familiarize yourself with the Citrus Payments SDK. This project comes bundled with the SDK.
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Example App Requirements
 + Xcode 8 or higher.
 
-###Citrus PG Prerequisites
+###Prerequisites to integrating with Citrus PG
 + You need to enroll with Citrus as a merchant.
 + You need to host Bill generator on your server
 + You need to host Return Url Page on your server. (After the transaction is complete, Citrus posts a response to this URL.)
@@ -50,13 +54,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 + SignUp Key
 + SignUp Secret
 
-Note: Please DO NOT PROCEED if the above mentioned requirements have not been met.
+Note: Please ensure all the requirements mentioned above are met before PROCEEDing.
 
-## Installation
+## Setup
 
 ##### Everything has a beginning. For using a framework, it's installation.
-
-See the the latest [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases)
 
 #### Using [CocoaPods](https://cocoapods.org/) (recommended)
 CocoaPods is a dependency manager for Cocoa projects. You can install it with the following command:
@@ -88,7 +90,7 @@ $ pod install
 
 You should open the {Project}.xcworkspace instead of the {Project}.xcodeproj after you installed anything from CocoaPods.
 
-#### Using Submodule
+#### Including the SDK as a Git Submodule
 If you do not wish to use CocoaPods then the secondary recommendation is to use a submodule. This allows you to easily track updates using standard Git commands. The first step to installation is to add the submodule to your project:
 ~~~{.m}
 $ cd /path/to/MyApplication
@@ -104,36 +106,37 @@ $ open citruspay-ios-sdk
 + Then navigate to `General` tab and expand the `Embedded Binaries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 
-#### Or Using Manually
+#### Manual inclusion
+If you’d like to download and maintain the SDK manually, please follow the steps listed below:
 + Clone it using following command
 ~~~{.m}
 $ git clone --recursive https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
 ~~~
-+ Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
-+ In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
++ Navigate to the Citrus "Framework" folder & drag the "core-sdk" folder into your existing Xcode project
++ In Xcode, go to your app's target settings. Under the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework:
 - `CitrusPay.framework`
-+ In Xcode, go to your app's target settings. On the `General` tab, expand the `Embedded Binaries` section.
++ In Xcode, go to your app's target settings. Under the `General` tab, expand the `Embedded Binaries` section.
 + Include the following framework:
 - `CitrusPay.framework`
 
-#### Add dependency (required for Using Submodule & Manually)
-##### JSONModel 
+#### Adding dependencies (required when including the SDK as a Submodule  including it manual)
+##### JSONModel
 + Navigate to "Dependency" folder & drag the `JSONModel.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
 + Select the target and Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
 + Click the + and `JSONModel.framework` appropriate to your target's platform
 + Then navigate to `General` tab and expand the `Embedded Binaries` section
 + Click the + and `JSONModel.framework` appropriate to your target's platform
 
-##### CitrusGraphics 
+##### CitrusGraphics
 + Navigate to "Framework" folder & drag "graphics-sdk" folder into your existing Xcode project
 + Select the target and Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusGraphics.framework` appropriate to your target's platform
 + Then navigate to `General` tab and expand the `Embedded Binaries` section
 + Click the + and `CitrusGraphics.framework` appropriate to your target's platform
 
-##### Kingfisher 
+##### Kingfisher
 + Navigate to "Dependency" folder & drag the `Kingfisher.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
 + Select the target and Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
 + Click the + and `Kingfisher.framework` appropriate to your target's platform
@@ -145,7 +148,7 @@ $ open citruspay-ios-sdk
 
 #### Next
 
-After installation, you could import CitrusPay to your project by adding this:
+After installation, you must import the CitrusPay SDK in your project by adding this:
 
 Swift
 ~~~{.m}
@@ -174,8 +177,13 @@ It exposes all the methods you can call to accept payments via the supported pay
 Detailed reference documentation is available on the reference page for the `CitrusPay` class.
 
 ### Data Models
-All other classes in the SDK are data models that are used to exchange data between your app and the SDK. 
+All other classes in the SDK are data models that are used to exchange data between your app and the SDK.
 Detailed reference documentation is available on the reference page for each class.
+
+## Next Steps
+Head over to the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki) to see all the API methods available.
+
+See the the latest [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases)
 
 ## Next Steps
 Head over to the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki) to see all the API methods available.

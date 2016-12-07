@@ -55,7 +55,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 + SignUp Key
 + SignUp Secret
 
-Note: Please ensure all the requirements mentioned above are met before PROCEEDing.
+Note: Please ensure all the requirements mentioned above are met before proceeding.
 
 ## Setup
 
@@ -189,13 +189,3 @@ See the the latest [releases page](https://github.com/citruspay/citruspay-ios-sd
 ## Next Steps
 Head over to the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki) to see all the API methods available.
 When you are ready, look at the samples below to learn how to interact with the SDK.
-
-## Other
-
-## Future of CitrusPay
-
-We want to keep CitrusPay lightweight. This framework will focus on providing a native integration to accept payments within these apps that is easy to integration and provides a high performance, functional checkout experience. This doesn’t mean the framework can’t be improved. CitrusPay is far from perfect, so necessary and useful updates will be made to make it better.
-
-## License
-
-CitrusPay is released under the MIT license. See LICENSE for details.

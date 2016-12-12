@@ -46,17 +46,12 @@
         else {
             // Your code to handle success.
             
-            // get saved NetBanking payment options
-            NSArray  *netBankingArray = [consumerProfile getSavedNBPaymentOptions];
-            NSLog(@"netBankingArray %@", netBankingArray);
-            
-            // get saved Debit cards payment options
-            NSArray  *debitCardArray = [consumerProfile getSavedDCPaymentOptions];
-            NSLog(@"debitCardArray %@", debitCardArray);
-            
-            // get saved Credit cards payment options
-            NSArray  *creditCardArray = [consumerProfile getSavedCCPaymentOptions];
-            NSLog(@"creditCardArray %@", creditCardArray);
+//            // get saved NetBanking payment options
+//            NSArray  *netBankingArray = [consumerProfile getSavedNBPaymentOptions];
+//            // get saved Debit cards payment options
+//            NSArray  *debitCardArray = [consumerProfile getSavedDCPaymentOptions];
+//            // get saved Credit cards payment options
+//            NSArray  *creditCardArray = [consumerProfile getSavedCCPaymentOptions];
             
             
             NSMutableString *toastString = [[NSMutableString alloc] init];
@@ -73,9 +68,6 @@
                         [_savedAccountsArray addObject:dict];
                     }
                 }
-                NSLog(@"saveCardsArray %@", _savedAccountsArray);
-                NSLog(@"_balancesArray %@", _balancesArray);
-                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.saveCardsTableView reloadData];
                 });

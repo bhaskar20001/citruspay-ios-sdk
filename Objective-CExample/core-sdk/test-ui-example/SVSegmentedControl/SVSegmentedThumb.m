@@ -272,7 +272,8 @@
 }
 
 - (void)arrangeLabel:(UILabel*)label imageView:(UIImageView*)imageView {
-    CGSize titleSize = [label.text sizeWithFont:self.font];
+    NSDictionary *attributes = @{NSFontAttributeName: self.font};
+    CGSize titleSize = [label.text sizeWithAttributes:attributes];
     CGFloat titleWidth = titleSize.width;
     CGFloat imageWidth = 0;
     

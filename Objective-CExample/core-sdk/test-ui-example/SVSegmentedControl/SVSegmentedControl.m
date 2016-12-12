@@ -112,7 +112,7 @@
 
 - (void)updateSectionRects {
     
-    int c = [self.sectionTitles count];
+    int c = (int)[self.sectionTitles count];
 	int i = 0;
 	
     [self calculateSegmentWidth];
@@ -134,6 +134,7 @@
     i = 0;
     self.thumbRects = [NSMutableArray new];
 	for(NSString *titleString in self.sectionTitles) {
+        NSLog(@"%@", titleString);
         CGRect thumbRect = CGRectMake(self.segmentWidth*i, 0, self.segmentWidth, self.bounds.size.height);
         thumbRect.size.width+=10; // 5px drop shadow on each side
         thumbRect.origin.x-=5;
@@ -155,7 +156,8 @@
         self.segmentWidth = 0;
         int i = 0;
         for(NSString *titleString in self.sectionTitles) {
-            CGFloat stringWidth = [titleString sizeWithFont:self.font].width+(self.titleEdgeInsets.left+self.titleEdgeInsets.right+self.thumbEdgeInset.left+self.thumbEdgeInset.right);
+            NSDictionary *attributes = @{NSFontAttributeName: self.font};
+            CGFloat stringWidth = [titleString sizeWithAttributes:attributes].width+(self.titleEdgeInsets.left+self.titleEdgeInsets.right+self.thumbEdgeInset.left+self.thumbEdgeInset.right);
             
             if(self.sectionImages.count > i)
                 stringWidth+=[(UIImage*)[self.sectionImages objectAtIndex:i] size].width+5;
@@ -368,7 +370,7 @@
 	int index;
 	
 	if(self.snapToIndex != -1)
-		index = self.snapToIndex;
+		index = (int) self.snapToIndex;
 	else
 		index = MIN(floor(self.thumb.center.x/self.segmentWidth), self.sectionTitles.count-1);
 	
@@ -592,7 +594,8 @@
 	int i = 0;
 	
 	for(NSString *titleString in self.sectionTitles) {
-        CGSize titleSize = [titleString sizeWithFont:self.font];
+        NSDictionary *attributes = @{NSFontAttributeName: self.font};
+        CGSize titleSize = [titleString sizeWithAttributes:attributes];
         CGFloat titleWidth = titleSize.width;
         CGFloat posY = round((CGRectGetHeight(rect)-self.font.ascender-5)/2)+self.titleEdgeInsets.top-self.titleEdgeInsets.bottom;
         //NSLog(@"%@ %f, height=%f, descender=%f, ascender=%f, lineHeight=%f", self.font.familyName, self.font.pointSize, titleSize.height, self.font.descender, self.font.ascender, self.font.lineHeight);
@@ -612,11 +615,24 @@
         if(image)
             [[self sectionImage:image withTintColor:self.textColor] drawAtPoint:CGPointMake(titlePosX, round((rect.size.height-image.size.height)/2))];
         
+        
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
 		[titleString drawAtPoint:CGPointMake(titlePosX+imageWidth, posY) forWidth:self.segmentWidth withFont:self.font lineBreakMode:UILineBreakModeTailTruncation];
 #else
         [titleString drawAtPoint:CGPointMake(titlePosX+imageWidth, posY) forWidth:self.segmentWidth withFont:self.font lineBreakMode:NSLineBreakByClipping];
 #endif
+        
+//        /// Make a copy of the default paragraph style
+//        NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+//        /// Set line break mode
+//        paragraphStyle.lineBreakMode = NSLineBreakByClipping;
+//        paragraphStyle.alignment = NSTextAlignmentRight;
+//        
+//        NSDictionary *dictionary = @{ NSFontAttributeName: self.font,
+//                                      NSParagraphStyleAttributeName: paragraphStyle};
+//        
+//        [titleString drawInRect:CGRectMake(titlePosX+imageWidth, posY, self.segmentWidth, self.thumbHeight) withAttributes:dictionary];
+
 		i++;
 	}
 }

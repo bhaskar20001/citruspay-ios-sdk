@@ -10,16 +10,16 @@
 		76016EE61DA39D10005D90A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76016EE51DA39D10005D90A1 /* AppDelegate.swift */; };
 		76016EFB1DA39D11005D90A1 /* CitrusGraphicsExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76016EFA1DA39D11005D90A1 /* CitrusGraphicsExampleTests.swift */; };
 		76016F061DA39D11005D90A1 /* CitrusGraphicsExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76016F051DA39D11005D90A1 /* CitrusGraphicsExampleUITests.swift */; };
-		76448C9C1DC22A910089B215 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C731DC229660089B215 /* Kingfisher.framework */; };
-		76448C9D1DC22A910089B215 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C731DC229660089B215 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		76448CA01DC22A910089B215 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C621DC229610089B215 /* JSONModel.framework */; };
-		76448CA11DC22A910089B215 /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C621DC229610089B215 /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		76448CC11DC230A20089B215 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76448CBC1DC230A20089B215 /* LICENSE */; };
-		76448CC31DC230A20089B215 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76448CBF1DC230A20089B215 /* LICENSE */; };
-		76448CC41DC230BC0089B215 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBB1DC230A20089B215 /* CitrusPay.framework */; };
-		76448CC51DC230BC0089B215 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBB1DC230A20089B215 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		76448CC61DC230BC0089B215 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBE1DC230A20089B215 /* CitrusGraphics.framework */; };
-		76448CC71DC230BC0089B215 /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBE1DC230A20089B215 /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		760B601D1DFAC7AE00E14409 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 760B601B1DFAC7AE00E14409 /* LICENSE */; };
+		760B60221DFAC7B400E14409 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 760B60201DFAC7B400E14409 /* LICENSE */; };
+		767400E41DFAC84A004DDFA6 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760B601F1DFAC7B400E14409 /* CitrusGraphics.framework */; };
+		767400E51DFAC84A004DDFA6 /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 760B601F1DFAC7B400E14409 /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		767400E61DFAC84A004DDFA6 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760B601A1DFAC7AE00E14409 /* CitrusPay.framework */; };
+		767400E71DFAC84A004DDFA6 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 760B601A1DFAC7AE00E14409 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		767400E81DFAC84A004DDFA6 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C731DC229660089B215 /* Kingfisher.framework */; };
+		767400E91DFAC84A004DDFA6 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C731DC229660089B215 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		767400EC1DFAC84A004DDFA6 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C621DC229610089B215 /* JSONModel.framework */; };
+		767400ED1DFAC84A004DDFA6 /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C621DC229610089B215 /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76AA1C4B1DA50B5100AACB48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76AA1C421DA50B5100AACB48 /* Assets.xcassets */; };
 		76AA1C4C1DA50B5100AACB48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76AA1C431DA50B5100AACB48 /* LaunchScreen.storyboard */; };
 		76AA1C4D1DA50B5100AACB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76AA1C451DA50B5100AACB48 /* Main.storyboard */; };
@@ -135,14 +135,14 @@
 			remoteGlobalIDString = D10EC2311C3D632300A4211C;
 			remoteInfo = "KingfisherTests-macOS";
 		};
-		76448C9E1DC22A910089B215 /* PBXContainerItemProxy */ = {
+		767400EA1DFAC84A004DDFA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
 			remoteInfo = "Kingfisher-iOS";
 		};
-		76448CA21DC22A910089B215 /* PBXContainerItemProxy */ = {
+		767400EE1DFAC84A004DDFA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 76448C5D1DC229600089B215 /* JSONModel.xcodeproj */;
 			proxyType = 1;
@@ -152,16 +152,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		76448CA41DC22A910089B215 /* Embed Frameworks */ = {
+		767400F01DFAC84A004DDFA6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				76448C9D1DC22A910089B215 /* Kingfisher.framework in Embed Frameworks */,
-				76448CA11DC22A910089B215 /* JSONModel.framework in Embed Frameworks */,
-				76448CC51DC230BC0089B215 /* CitrusPay.framework in Embed Frameworks */,
-				76448CC71DC230BC0089B215 /* CitrusGraphics.framework in Embed Frameworks */,
+				767400E51DFAC84A004DDFA6 /* CitrusGraphics.framework in Embed Frameworks */,
+				767400E91DFAC84A004DDFA6 /* Kingfisher.framework in Embed Frameworks */,
+				767400ED1DFAC84A004DDFA6 /* JSONModel.framework in Embed Frameworks */,
+				767400E71DFAC84A004DDFA6 /* CitrusPay.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,12 +178,12 @@
 		76016F011DA39D11005D90A1 /* CitrusGraphicsExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitrusGraphicsExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76016F051DA39D11005D90A1 /* CitrusGraphicsExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitrusGraphicsExampleUITests.swift; sourceTree = "<group>"; };
 		76016F071DA39D11005D90A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		760B601A1DFAC7AE00E14409 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
+		760B601B1DFAC7AE00E14409 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		760B601F1DFAC7B400E14409 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
+		760B60201DFAC7B400E14409 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		76448C5D1DC229600089B215 /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
 		76448C631DC229660089B215 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
-		76448CBB1DC230A20089B215 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
-		76448CBC1DC230A20089B215 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		76448CBE1DC230A20089B215 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
-		76448CBF1DC230A20089B215 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		76AA1C421DA50B5100AACB48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76AA1C441DA50B5100AACB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76AA1C461DA50B5100AACB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -198,10 +198,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76448CC41DC230BC0089B215 /* CitrusPay.framework in Frameworks */,
-				76448CC61DC230BC0089B215 /* CitrusGraphics.framework in Frameworks */,
-				76448C9C1DC22A910089B215 /* Kingfisher.framework in Frameworks */,
-				76448CA01DC22A910089B215 /* JSONModel.framework in Frameworks */,
+				767400E41DFAC84A004DDFA6 /* CitrusGraphics.framework in Frameworks */,
+				767400E81DFAC84A004DDFA6 /* Kingfisher.framework in Frameworks */,
+				767400EC1DFAC84A004DDFA6 /* JSONModel.framework in Frameworks */,
+				767400E61DFAC84A004DDFA6 /* CitrusPay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +225,8 @@
 		76016ED91DA39D10005D90A1 = {
 			isa = PBXGroup;
 			children = (
-				76448CBA1DC230A20089B215 /* core-sdk */,
-				76448CBD1DC230A20089B215 /* graphics-sdk */,
+				760B601E1DFAC7B400E14409 /* graphics-sdk */,
+				760B60191DFAC7AE00E14409 /* core-sdk */,
 				76448C631DC229660089B215 /* Kingfisher.xcodeproj */,
 				76448C5D1DC229600089B215 /* JSONModel.xcodeproj */,
 				76016EE41DA39D10005D90A1 /* CitrusGraphicsExample */,
@@ -274,6 +274,26 @@
 			path = CitrusGraphicsExampleUITests;
 			sourceTree = "<group>";
 		};
+		760B60191DFAC7AE00E14409 /* core-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				760B601A1DFAC7AE00E14409 /* CitrusPay.framework */,
+				760B601B1DFAC7AE00E14409 /* LICENSE */,
+			);
+			name = "core-sdk";
+			path = "../../../Framework/core-sdk";
+			sourceTree = "<group>";
+		};
+		760B601E1DFAC7B400E14409 /* graphics-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				760B601F1DFAC7B400E14409 /* CitrusGraphics.framework */,
+				760B60201DFAC7B400E14409 /* LICENSE */,
+			);
+			name = "graphics-sdk";
+			path = "../../../Framework/graphics-sdk";
+			sourceTree = "<group>";
+		};
 		76448C5E1DC229600089B215 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,26 +321,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76448CBA1DC230A20089B215 /* core-sdk */ = {
-			isa = PBXGroup;
-			children = (
-				76448CBB1DC230A20089B215 /* CitrusPay.framework */,
-				76448CBC1DC230A20089B215 /* LICENSE */,
-			);
-			name = "core-sdk";
-			path = "../../../Framework/core-sdk";
-			sourceTree = "<group>";
-		};
-		76448CBD1DC230A20089B215 /* graphics-sdk */ = {
-			isa = PBXGroup;
-			children = (
-				76448CBE1DC230A20089B215 /* CitrusGraphics.framework */,
-				76448CBF1DC230A20089B215 /* LICENSE */,
-			);
-			name = "graphics-sdk";
-			path = "../../../Framework/graphics-sdk";
-			sourceTree = "<group>";
-		};
 		76AA1C411DA50B5100AACB48 /* test-ui-example */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,13 +346,13 @@
 				76016EDE1DA39D10005D90A1 /* Sources */,
 				76016EDF1DA39D10005D90A1 /* Frameworks */,
 				76016EE01DA39D10005D90A1 /* Resources */,
-				76448CA41DC22A910089B215 /* Embed Frameworks */,
+				767400F01DFAC84A004DDFA6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				76448C9F1DC22A910089B215 /* PBXTargetDependency */,
-				76448CA31DC22A910089B215 /* PBXTargetDependency */,
+				767400EB1DFAC84A004DDFA6 /* PBXTargetDependency */,
+				767400EF1DFAC84A004DDFA6 /* PBXTargetDependency */,
 			);
 			name = CitrusGraphicsExample;
 			productName = CitrusGraphicsExample;
@@ -407,8 +407,7 @@
 				TargetAttributes = {
 					76016EE11DA39D10005D90A1 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BF75J23QJ2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					76016EF51DA39D11005D90A1 = {
 						CreatedOnToolsVersion = 8.0;
@@ -555,9 +554,9 @@
 			files = (
 				76AA1C4D1DA50B5100AACB48 /* Main.storyboard in Resources */,
 				76AA1C4B1DA50B5100AACB48 /* Assets.xcassets in Resources */,
-				76448CC11DC230A20089B215 /* LICENSE in Resources */,
+				760B601D1DFAC7AE00E14409 /* LICENSE in Resources */,
 				76AA1C4C1DA50B5100AACB48 /* LaunchScreen.storyboard in Resources */,
-				76448CC31DC230A20089B215 /* LICENSE in Resources */,
+				760B60221DFAC7B400E14409 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,15 +618,15 @@
 			target = 76016EE11DA39D10005D90A1 /* CitrusGraphicsExample */;
 			targetProxy = 76016F021DA39D11005D90A1 /* PBXContainerItemProxy */;
 		};
-		76448C9F1DC22A910089B215 /* PBXTargetDependency */ = {
+		767400EB1DFAC84A004DDFA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Kingfisher-iOS";
-			targetProxy = 76448C9E1DC22A910089B215 /* PBXContainerItemProxy */;
+			targetProxy = 767400EA1DFAC84A004DDFA6 /* PBXContainerItemProxy */;
 		};
-		76448CA31DC22A910089B215 /* PBXTargetDependency */ = {
+		767400EF1DFAC84A004DDFA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JSONModel;
-			targetProxy = 76448CA21DC22A910089B215 /* PBXContainerItemProxy */;
+			targetProxy = 767400EE1DFAC84A004DDFA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -749,8 +748,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BF75J23QJ2;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../Framework/core-sdk/**",
+					"$(PROJECT_DIR)/../../../Framework/graphics-sdk/**",
+				);
 				INFOPLIST_FILE = CitrusGraphicsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -765,8 +767,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BF75J23QJ2;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../Framework/core-sdk/**",
+					"$(PROJECT_DIR)/../../../Framework/graphics-sdk/**",
+				);
 				INFOPLIST_FILE = CitrusGraphicsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

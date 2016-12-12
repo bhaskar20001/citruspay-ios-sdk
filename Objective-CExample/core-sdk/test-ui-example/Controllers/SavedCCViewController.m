@@ -59,20 +59,12 @@
         else {
             // Your code to handle success.
             
-            // get saved NetBanking payment options
-            NSArray  *netBankingArray = [consumerProfile getSavedNBPaymentOptions];
-            NSLog(@"netBankingArray %@", netBankingArray);
-            
-            // get saved Debit cards payment options
-            NSArray  *debitCardArray = [consumerProfile getSavedDCPaymentOptions];
-            NSLog(@"debitCardArray %@", debitCardArray);
-            
-            // get saved Credit cards payment options
+//            // get saved NetBanking payment options
+//            NSArray  *netBankingArray = [consumerProfile getSavedNBPaymentOptions];
+//            // get saved Debit cards payment options
+//            NSArray  *debitCardArray = [consumerProfile getSavedDCPaymentOptions];
+//            // get saved Credit cards payment options
             NSArray  *creditCardArray = [consumerProfile getSavedCCPaymentOptions];
-            NSLog(@"creditCardArray %@", creditCardArray);
-            
-            
-            
             NSMutableString *toastString = [[NSMutableString alloc] init];
             if([creditCardArray count])
             {
@@ -81,20 +73,12 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.saveCardsTableView reloadData];
                 });
-                
             }
             else{
                 toastString =(NSMutableString *) @"No saved credit cards, please save credit card first";
                 [UIUtility toastMessageOnScreen:toastString];
             }
-
-            
-            
         }}];
-    
-    
-    
-    
 }
 
 

@@ -140,4 +140,8 @@ void LogInfo(NSString *format,...);
 void LogWarning(NSString *format,...);
 void LogError(NSString *format,...);
 void LogSevere(NSString *format,...);
+
+void LogInfo_LazyPay(NSString *format,...);
+void LogError_LazyPay(NSString *format,...);
+void LogProperties_LazyPay(id object);
 @end

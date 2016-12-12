@@ -84,7 +84,6 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     [self.view endEditing:YES];
     if (alertView.tag ==10001){
-        NSLog(@"Array -> %@",self.navigationController.viewControllers );
         HomeViewController *controller = (HomeViewController *)[self.navigationController.viewControllers objectAtIndex:(self.navigationController.viewControllers.count-3)];
         [self.navigationController popToViewController:controller animated:YES];
     }

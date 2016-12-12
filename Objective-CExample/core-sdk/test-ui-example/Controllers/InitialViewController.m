@@ -81,7 +81,7 @@
 #pragma mark - UIControlEventValueChanged
 - (void)segmentedControlChangedValue:(NSUInteger)newIndex {
     if ([self.view superview]) {
-        if ([[CTSAuthLayer fetchSharedAuthLayer] isLoggedIn] ||
+        if ([[CTSAuthLayer fetchSharedAuthLayer] isUserSignedIn] ||
             [[CTSAuthLayer fetchSharedAuthLayer] isUserBound]) {
             [self environmentChangeAction:newIndex];
         }
@@ -115,21 +115,16 @@
                                     style:UIAlertActionStyleCancel
                                     handler:^(UIAlertAction *action)
                                     {
-                                        
                                         if (newIndex == 0) {
                                             if ([self.view superview]) {
-                                                if ([[CTSAuthLayer fetchSharedAuthLayer] isLoggedIn]) {
-                                                    [[CTSAuthLayer fetchSharedAuthLayer] signOut];
-                                                    [self logoutAction:@"Sandbox"];
-                                                }
+                                                [[CTSAuthLayer fetchSharedAuthLayer] signOut];
+                                                [self logoutAction:@"Sandbox"];
                                             }
                                         }
                                         else {
                                             if ([self.view superview]) {
-                                                if ([[CTSAuthLayer fetchSharedAuthLayer] isLoggedIn]) {
-                                                    [[CTSAuthLayer fetchSharedAuthLayer] signOut];
-                                                    [self logoutAction:@"Production"];
-                                                }
+                                                [[CTSAuthLayer fetchSharedAuthLayer] signOut];
+                                                [self logoutAction:@"Production"];
                                             }
                                         }
                                         [_baseViewController viewDidLoad];
@@ -178,17 +173,47 @@
     }
     else {
         
-        if ([CTSAuthLayer fetchSharedAuthLayer].requestSignInOauthToken.length != 0) {
+//        if ([CTSAuthLayer fetchSharedAuthLayer].requestSignInOauthToken.length != 0) {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
+//            });
+//        }
+//        else{
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self performSegueWithIdentifier:@"SignupViewIdentifier" sender:nil];
+//            });
+//        }
+        
+        
+        if ([[CTSAuthLayer fetchSharedAuthLayer] isUserSignedIn]) {
+            NSLog(@"User SignedIn");
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
             });
         }
-        else{
+        else {
+            NSLog(@"User not SignedIn");
+            UIAlertController *alertController = [UIAlertController
+                                                  alertControllerWithTitle:@"Info"
+                                                  message:@"User not SignedIn.\nPlease SignedIn to Citrus Account."
+                                                  preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *okAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Ok", @"Ok action")
+                                       style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                           NSLog(@"Ok action");
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               [self performSegueWithIdentifier:@"SignupViewIdentifier" sender:nil];
+                                           });
+                                       }];
+            [alertController addAction:okAction];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self performSegueWithIdentifier:@"SignupViewIdentifier" sender:nil];
+                [self presentViewController:alertController animated:YES completion:nil];
             });
         }
-        
+
     }
 }
 

@@ -107,12 +107,8 @@
     [[CTSPaymentLayer fetchSharedPaymentLayer] requestCardBINService:@"4377486998511289"
                                                    completionHandler:^(CTSCardBinJSON *cardBinJSON,
                                                                        NSError *error) {
-        NSLog(@"error %@", error);
-        NSLog(@"cardBinJSON %@", cardBinJSON);
     }];
     [[CTSPaymentLayer fetchSharedPaymentLayer] requestAuthCardBINService:@"4377486998511289" completionHandler:^(CTSCardBinJSON *cardBinJSON, NSError *error) {
-        NSLog(@"error %@", error);
-        NSLog(@"cardBinJSON %@", cardBinJSON);
     }];
      */
     
@@ -273,14 +269,6 @@
                                      _amountDistribution = amountDistribution;
                                      _useMVC = amountDistribution.useMVC;
                                      _useCash = amountDistribution.useCash;
-//                                     if (amountDistribution.enoughMVCAndCash) {
-//                                         _useOther = NO;
-//                                     }
-//                                     else {
-//                                         _useOther = YES;
-//                                     }
-
-                                     NSLog(@"_amountDistribution %@", _amountDistribution);
                                      dispatch_async(dispatch_get_main_queue(), ^{
                                          [self.saveCardsTableView reloadData];
                                      });
@@ -352,7 +340,7 @@
             
             [self.ccddtableView reloadData];
             if (_segControl.selectedSegmentIndex==2) {
-                if ([[CTSAuthLayer fetchSharedAuthLayer] isLoggedIn]) {
+                if ([[CTSAuthLayer fetchSharedAuthLayer] isUserSignedIn]) {
                     [self getActiveSubs:nil];
                 }
                 [self removePaymentOption:@"Debit-Card"];
@@ -437,17 +425,12 @@
         else {
             // Your code to handle success.
             
-            // get saved NetBanking payment options
-            NSArray  *netBankingArray = [consumerProfile getSavedNBPaymentOptions];
-            NSLog(@"netBankingArray %@", netBankingArray);
-            
-            // get saved Debit cards payment options
-            NSArray  *debitCardArray = [consumerProfile getSavedDCPaymentOptions];
-            NSLog(@"debitCardArray %@", debitCardArray);
-            
-            // get saved Credit cards payment options
-            NSArray  *creditCardArray = [consumerProfile getSavedCCPaymentOptions];
-            NSLog(@"creditCardArray %@", creditCardArray);
+//            // get saved NetBanking payment options
+//            NSArray  *netBankingArray = [consumerProfile getSavedNBPaymentOptions];
+//            // get saved Debit cards payment options
+//            NSArray  *debitCardArray = [consumerProfile getSavedDCPaymentOptions];
+//            // get saved Credit cards payment options
+//            NSArray  *creditCardArray = [consumerProfile getSavedCCPaymentOptions];
             
             if ([_balancesArray count] != 0) {
                 [_balancesArray removeAllObjects];
@@ -475,9 +458,6 @@
                         [_savedAccountsArray addObject:dict];
                     }
                 }
-                NSLog(@"saveCardsArray %@", _savedAccountsArray);
-                NSLog(@"_balancesArray %@", _balancesArray);
-                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.saveCardsTableView reloadData];
                 });
@@ -597,26 +577,11 @@
             creditArray = [CTSUtility fetchMappedCardSchemeForSaveCards:[[NSSet setWithArray:pgSettings.creditCard] allObjects] ];
             
             NSMutableDictionary *tempDict = [[NSMutableDictionary alloc]init];
-            
-            
-            LogTrace(@" pgSettings %@ ", pgSettings);
-            for (NSString* val in creditArray) {
-                LogTrace(@"CC %@ ", val);
-            }
-            
-            for (NSString* val in debitArray) {
-                LogTrace(@"DC %@ ", val);
-            }
-            
             _banksArray = pgSettings.netBanking;
             
             for (NSDictionary* arr in pgSettings.netBanking) {
                 //setting the object for Issuer bank code in Dictionary
-                [tempDict setObject:[arr valueForKey:@"issuerCode"] forKey:[arr valueForKey:@"bankName"]];
-                
-                LogTrace(@"bankName %@ ", [arr valueForKey:@"bankName"]);
-                LogTrace(@"issuerCode %@ ", [arr valueForKey:@"issuerCode"]);
-                
+                [tempDict setObject:[arr valueForKey:@"issuerCode"] forKey:[arr valueForKey:@"bankName"]];                
             }
             netBankingDict = tempDict;
         }
@@ -1111,19 +1076,6 @@
 
 
 - (void)simpliPay {
-
-    self.indicatorView.hidden = FALSE;
-    [self.indicatorView startAnimating];
-    
-
-//    if (_segControl.selectedSegmentIndex==1 ||
-//        _segControl.selectedSegmentIndex==2 ||
-//        _segControl.selectedSegmentIndex==3) {
-//        _useMVC = NO;
-//        _useCash = NO;
-//    }
-
-    
     NSString *totalSelectedAmount = [NSString stringWithFormat:@"%.02f", [_totalSelectedAmount floatValue]];
     
     // If you wish to use BillURL follow below signature
@@ -1161,19 +1113,11 @@
            andParentViewController:self
                  completionHandler:^(CTSPaymentReceipt *paymentReceipt, NSError *error) {
                      dispatch_async(dispatch_get_main_queue(), ^{
-                         [self.indicatorView stopAnimating];
-                         self.indicatorView.hidden = TRUE;
-                     });
-                     
-                     dispatch_async(dispatch_get_main_queue(), ^{
                          if (error) {
                              [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                             NSLog(@"error %@", [error localizedDescription]);
                              [self.navigationController popViewControllerAnimated:YES];
                          }
                          else {
-                             NSLog(@"response %@", paymentReceipt.toDictionary);
-                             
                              NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
                              if ([paymentStatus length] == 0) {
                                  paymentStatus = paymentReceipt.toDictionary[@"Reason"];
@@ -1200,7 +1144,6 @@
                                      self.indicatorView.hidden = TRUE;
                                  });
                                  [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                                 NSLog(@"error %@", [error localizedDescription]);
                                  [self.navigationController popViewControllerAnimated:YES];
                                  return;
                              }
@@ -1248,12 +1191,10 @@
                                                   dispatch_async(dispatch_get_main_queue(), ^{
                                                       if (error) {
                                                           [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                                                          NSLog(@"error %@", [error localizedDescription]);
                                                           [self.navigationController popViewControllerAnimated:YES];
                                                       }
                                                       else {
-                                                          NSLog(@"response %@", paymentReceipt.toDictionary);
-                                                          
+ 
                                                           NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
                                                           if ([paymentStatus length] == 0) {
                                                               paymentStatus = paymentReceipt.toDictionary[@"Reason"];
@@ -1272,11 +1213,6 @@
 
 
 - (void)loadMoneyInCitrusPay {
-    
-    
-    self.indicatorView.hidden = FALSE;
-    [self.indicatorView startAnimating];
-    
     NSString *totalSelectedAmount = [NSString stringWithFormat:@"%.02f", [_totalSelectedAmount floatValue]];
     
     PaymentType *paymentType;
@@ -1291,21 +1227,12 @@
            andParentViewController:self
                  completionHandler:^(CTSPaymentReceipt *paymentReceipt, NSError *error) {
                      dispatch_async(dispatch_get_main_queue(), ^{
-                         [self.indicatorView stopAnimating];
-                         self.indicatorView.hidden = TRUE;
-                     });
-                     
-                     dispatch_async(dispatch_get_main_queue(), ^{
                          if (error) {
                              [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                             NSLog(@"error %@", [error localizedDescription]);
                              [self.navigationController popViewControllerAnimated:YES];
                          }
                          else {
-                             NSLog(@"response %@", paymentReceipt.toDictionary);
-                             //                             [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Load Money Status %@",[paymentReceipt.toDictionary valueForKey:LoadMoneyResponeKey]]];
                              [self resetUI];
-                             
                              UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:[NSString stringWithFormat:@"Load Money Status %@",[paymentReceipt.toDictionary valueForKey:LoadMoneyResponeKey]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                              
                              if (_segControl.selectedSegmentIndex==2) {
@@ -1313,7 +1240,6 @@
                                  alert.tag = 102;
                              }
                              [alert show];
-                             //[self.navigationController popViewControllerAnimated:YES];
                          }
                      });
                  }];
@@ -1322,9 +1248,6 @@
 
 
 - (void)dynamicPricing {
-    self.indicatorView.hidden = FALSE;
-    [self.indicatorView startAnimating];
-    
     NSString *totalSelectedAmount = [NSString stringWithFormat:@"%.02f", [_totalSelectedAmount floatValue]];
 
     // If you wish to use BillURL follow below signature
@@ -1342,19 +1265,11 @@
            andParentViewController:self
                  completionHandler:^(CTSPaymentReceipt *paymentReceipt, NSError *error) {
                      dispatch_async(dispatch_get_main_queue(), ^{
-                         [self.indicatorView stopAnimating];
-                         self.indicatorView.hidden = TRUE;
-                     });
-                     
-                     dispatch_async(dispatch_get_main_queue(), ^{
                          if (error) {
                              [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                             NSLog(@"error %@", [error localizedDescription]);
                              [self.navigationController popViewControllerAnimated:YES];
                          }
                          else {
-                             NSLog(@"response %@", paymentReceipt.toDictionary);
-                             
                              NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
                              if ([paymentStatus length] == 0) {
                                  paymentStatus = paymentReceipt.toDictionary[@"Reason"];
@@ -1381,7 +1296,6 @@
                                     });
                                     
                                     [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                                    NSLog(@"error %@", [error localizedDescription]);
                                     [self.navigationController popViewControllerAnimated:YES];
                                 }
                                 else {
@@ -1406,12 +1320,10 @@
                                                      dispatch_async(dispatch_get_main_queue(), ^{
                                                          if (error) {
                                                              [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                                                             NSLog(@"error %@", [error localizedDescription]);
                                                              [self.navigationController popViewControllerAnimated:YES];
                                                          }
                                                          else {
-                                                             NSLog(@"response %@", paymentReceipt.toDictionary);
-                                                             
+ 
                                                              NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
                                                              if ([paymentStatus length] == 0) {
                                                                  paymentStatus = paymentReceipt.toDictionary[@"Reason"];

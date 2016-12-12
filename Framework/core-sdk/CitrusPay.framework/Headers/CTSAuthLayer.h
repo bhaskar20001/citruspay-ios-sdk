@@ -301,11 +301,15 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
  *
  *  @return yes if anyone is signed in, NO otherwise
  */
--(BOOL)isAnyoneSignedIn DEPRECATED_MSG_ATTRIBUTE("Use 'isLoggedIn'");;
+-(BOOL)isAnyoneSignedIn DEPRECATED_MSG_ATTRIBUTE("Use 'isLoggedIn'");
+
 -(BOOL)isUserBound;
--(BOOL)isLoggedIn;
+
+-(BOOL)isLoggedIn DEPRECATED_MSG_ATTRIBUTE("Use 'isUserSignedIn'");
+
 -(BOOL)canLoadCitrusCash;
 
+- (BOOL)isUserSignedIn;
 
 - (NSString*)generateBigIntegerString:(NSString*)email ;
 
